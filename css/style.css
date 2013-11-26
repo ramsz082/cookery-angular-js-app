@@ -1,0 +1,103 @@
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video, p, div, body, h1, h2, h3, h4, h5, h6, ul, li, a , button{
+	font-family:contentFont;
+	list-style:none;
+}
+body
+{
+background:#E9E0E0;
+}
+a, a:hover, a:active, a:visited
+{
+text-decoration:none;
+}
+@font-face
+{
+font-family: contentFont;
+src: url('../fonts/AvenirLTStd-Book.otf'); /* IE9 */
+}
+.recipe-container
+{
+max-width:357px;
+margin:0 auto;
+}
+.firstDiv
+{
+padding:0;
+}
+.recipe-container ul
+{
+padding:0;
+}
+.recipe-container .topHeader ul
+{
+max-width:239px;
+float:left;
+}
+.recipe-container .topHeader
+{
+padding:0px 10px 0px 0px;
+}
+.recipe-container .topHeader li.active a
+{
+color:#fff;
+}
+.recipe-container .topHeader li
+{
+padding: 19px 23px;
+font-size: 20px;
+border-radius: 10px 10px 0 0;
+}
+.recipe-container .topHeader li.active
+{
+background-color: rgb(202, 125, 54);
+}
+.pageheader
+{
+margin:0;
+}
+.pageheader h2
+{
+text-align:center;
+margin:0 auto;
+max-width:100px;
+margin-top:10px;
+}
+.pageheader 	.header-btn
+{
+margin:20px auto;
+font-size:17px;
+color:#fff;
+max-width:90px;
+margin-top:10px;
+}
+.pageheader 	.glyphicon
+{
+padding:2px 25px 0px 0px;
+}
+.glyphicon
+{
+padding:0px 25px 0px 0px;
+}
+.search-btn
+{
+border-radius:20px;
+max-width:254px;
+margin:0 auto 5px;
+}
+.recipe-container .panel-heading
+{
+color:#fff;
+background-color:#665C5C;
+border-radius:5px;
+}
+.recipe-container .panel-body
+{
+color:#665C5C;
+background-color:#fff;
+border-radius:5px;
+}
+.recipe-container .modal-body input,.recipe-container .modal-body textarea
+{
+max-width:254px;
+margin:10px auto;
+}

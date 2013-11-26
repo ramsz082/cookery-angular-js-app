@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cookApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/favicon.png">
+    <title>Indian Cookery</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">	
+    <script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/angular.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/controller.js" type="text/javascript"></script>
+	<script src="js/Services.js" type="text/javascript"></script>
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body ng-controller="MyRecipeCtrl">
+	<div class="recipe-container">
+		<div class="row pageheader">
+		<div class="topHeader">
+		<ul>
+			<li class="pull-left active"><a href="#Recipes" id="allRecipes">Recipes</a></li>
+			<li class="pull-right" ><a id="myFavRecipe" href="#MyRecipes">My Fav</a></li>
+		</ul>
+		<button class="btn btn-primary btn-sm header-btn pull-right" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus-sign"></span>New</button>
+		</div>
+		<!-- Modal -->
+		<div  class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Create new Recipe</h4>
+			  </div>
+			  <div class="modal-body">
+				 <input type="text" class="form-control" placeholder="Name" ng-model="newRecipe.name" required>
+				 <!--<input type="text" class="form-control" placeholder="Ingredients" ng-model="name">-->
+				 <textarea rows="3" col="50" class="form-control" placeholder="Preparation" ng-model="newRecipe.preparation" required></textarea>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button id="saveButton" type="button" class="btn btn-primary" ng-click="addRecipe()">Save</button>
+			  </div>		
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		</div> 
+		<input type="text" class="form-control search-btn" placeholder="Search" ng-model="search.name">
+		  
+		  <div ng-view></div>
+	  </div>
+  </body>
+</html>
+  </body>
+</html>
