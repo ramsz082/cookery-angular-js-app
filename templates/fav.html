@@ -1,5 +1,14 @@
-<!-- ramya todo: fix  -->
-<p>Hmm. I'm not really sure what this is. Is the intention that you can mark
-  certain recipes as favourites, e.g. by clicking on a star?
-</p>
+<div>
+  <input type="text" class="input-block-level form-control search-btn search-query" placeholder="Search" ng-model="search.name">
+</div>
 
+<accordion close-others="true" id=accordion>
+  <accordion-group ng-repeat="recipe in recipes track by $index | filter:search ">
+    <accordion-heading xxclass="panel panel-default">
+       {{favrecipe.name}} 
+	   <i class="pull-right" ng-class="{'icon-chevron-down': isopen, 'icon-chevron-right': !isopen}"></i>
+    </accordion-heading>
+
+    <p>{{favrecipe.preparation}}</p>
+  </accordion-group>
+</accordion>

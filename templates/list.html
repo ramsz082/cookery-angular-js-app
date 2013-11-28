@@ -5,11 +5,12 @@
 <accordion close-others="true" id=accordion>
   <accordion-group ng-repeat="recipe in recipes | filter:search | orderBy:'name' ">
     <accordion-heading xxclass="panel panel-default">
-       {{recipe.name}} <i class="pull-right" ng-class="{'icon-chevron-down': isopen, 'icon-chevron-right': !isopen}"></i>
+       {{recipe.name}} 
+	   <i class="pull-right" ng-class="{'icon-chevron-down': isopen, 'icon-chevron-right': !isopen}"></i>
     </accordion-heading>
-
     <p>{{recipe.preparation}}</p>
     <button class="btn btn-small" ng-click="edit(recipe)">Edit</button>
+	<a id="favlist" ng-class="{'icon-heart': isopen, 'icon-heart': !isopen}" ng-click="addFav(recipe)" href="javascript:void(0)" ng-click="addFav(recipe)"></a>
   </accordion-group>
 </accordion>
 

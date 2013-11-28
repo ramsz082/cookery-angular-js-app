@@ -32,8 +32,6 @@ var RecipeModalInstanceCtrl = function ($scope, $modalInstance, title, recipe) {
   };
 };
 
-
-
 cookApp.controller('RecipeListCtrl', function ($scope, $modal, $log, RecipeService) {
 
   $scope.recipes = RecipeService.recipes();
@@ -57,7 +55,6 @@ cookApp.controller('RecipeListCtrl', function ($scope, $modal, $log, RecipeServi
     });
   };
 
-
   $scope.edit = function(recipe) {
     var index = $scope.recipes.indexOf(recipe);
 
@@ -77,13 +74,14 @@ cookApp.controller('RecipeListCtrl', function ($scope, $modal, $log, RecipeServi
       $log.info('Modal dismissed at: ' + new Date());
     });
   };
+	$scope.addFav = function(recipe) {
+		$scope.favrecipes = RecipeService.addFav(recipe); 	
+	};
 });
 
 
-cookApp.controller('FavRecipeCtrl', function ($scope) {
-
-  // TODO: don't know what is the function of Fav.
-
+cookApp.controller('FavRecipeCtrl', function ($scope, RecipeStorageService) {
+	$scope.recipes = RecipeStorageService.recipes(); 
 });
 
 

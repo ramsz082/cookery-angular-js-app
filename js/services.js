@@ -37,40 +37,22 @@ angular.module('RecipeServiceFactory', [])
         // would a listener could then back to local storage.
         return data;
       },
+	  addFav: function (recipe) {
+		var favRecipes = localStorage.getItem('favrecipes');
+		var favRecipes = (localStorage.getItem('favrecipes')!==null) ? JSON.parse(favRecipes) : [ ];
+		favRecipes.push({name: recipe.name, preparation: recipe.preparation}); 
+		localStorage.setItem('favrecipes',JSON.stringify(favRecipes));          
+      },
     }
   }) // end of Recipes service
 
   .factory ('RecipeStorageService', function () {
-
-    /* TODO: could manage all local storage in here.
-             The RecipeService would call this for the initial set of data,
-             which would get it from local storage (if it's there) or initialise it
-             (if it's not in storage).
-
-             Then when RecipeService changes data, it would broadcast an event
-             and this service would persist changes to local storage.
-
-       NOTES from Ramya's original
-
-       localStorage.setItem("recipes", JSON.stringify($scope.recipes));
-
-       $scope.saved = localStorage.getItem('recipes');
-       $scope.recipes = (localStorage.getItem('recipes')!==null) ? JSON.parse($scope.saved) : [ ];
-       localStorage.setItem('recipes', JSON.stringify($scope.recipes));
-       $scope.list = function(){
-         if(typeof $scope.recipes ==='undefined') {
-           if(localStorage.getItem("recipes") ===null) {
-             $scope.recipes = [];
-           } else {
-             $scope.recipes = JSON.parse(localStorage.getItem("recipes"));
-           }
-         } else {
-           console.log('num recipes'+$scope.recipes.length);
-         }
-       };
-
-    */
-
+	var favdata = localStorage.getItem('favrecipes');	
+	return {
+	recipes: function() {
+	return favdata;
+	},
+	}
   } // end of Recipes Storage service
 );
 
