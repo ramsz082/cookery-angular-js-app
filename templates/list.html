@@ -1,0 +1,20 @@
+<div>
+  <input type="text" class="input-block-level form-control search-btn search-query" placeholder="Search" ng-model="search.name">
+</div>
+
+<accordion close-others="true" id=accordion>
+  <accordion-group ng-repeat="recipe in recipes | filter:search | orderBy:'name' ">
+    <accordion-heading xxclass="panel panel-default">
+       {{recipe.name}} <i class="pull-right" ng-class="{'icon-chevron-down': isopen, 'icon-chevron-right': !isopen}"></i>
+    </accordion-heading>
+
+    <p>{{recipe.preparation}}</p>
+    <button class="btn btn-small" ng-click="edit(recipe)">Edit</button>
+  </accordion-group>
+</accordion>
+
+<!-- this is just to see the data. Development only. 
+<div class=data-display>
+  <pre>{{recipes|json}}</pre>
+</div>
+-->
