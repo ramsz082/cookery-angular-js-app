@@ -18,7 +18,7 @@ cookApp.config(['$routeProvider',
 }]);
 
 
-var RecipeModalInstanceCtrl = function ($scope, $modalInstance, title, recipe) {
+var RecipeModalInstanceCtrl = function ($scope, $modalInstance, title, recipe, isFavRecipe) {
 
   $scope.title = title;
   $scope.recipe = recipe;
@@ -35,7 +35,6 @@ var RecipeModalInstanceCtrl = function ($scope, $modalInstance, title, recipe) {
 cookApp.controller('RecipeListCtrl', function ($scope, $modal, $log, RecipeService) {
 
   $scope.recipes = RecipeService.recipes();
-
   $scope.add = function() {
 
     var modalInstance = $modal.open({
@@ -75,13 +74,19 @@ cookApp.controller('RecipeListCtrl', function ($scope, $modal, $log, RecipeServi
     });
   };
 	$scope.addFav = function(recipe) {
-		$scope.favrecipes = RecipeService.addFav(recipe); 	
+	  $scope.recipes = RecipeService.addFav(recipe);	  
 	};
 });
 
 
-cookApp.controller('FavRecipeCtrl', function ($scope, RecipeStorageService) {
-	$scope.recipes = RecipeStorageService.recipes(); 
+cookApp.controller('FavRecipeCtrl', function ($scope, RecipeStorageService, RecipeService) {
+	var favRecipes = RecipeService.recipes();
+	$scope.recipes = [];
+	angular.forEach(favRecipes, function(recipe) {
+		if (recipe.favitem == true) {
+		  $scope.recipes.push(recipe);
+		}
+	});	
 });
 
 
