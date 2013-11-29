@@ -3,12 +3,13 @@
 </div>
 
 <accordion close-others="true" id=accordion>
-  <accordion-group ng-repeat="recipe in recipes track by $index | filter:search ">
+  <accordion-group ng-repeat="recipe in recipes | filter:search ">
     <accordion-heading xxclass="panel panel-default">
-       {{favrecipe.name}} 
+       {{recipe.name}} 
 	   <i class="pull-right" ng-class="{'icon-chevron-down': isopen, 'icon-chevron-right': !isopen}"></i>
     </accordion-heading>
 
-    <p>{{favrecipe.preparation}}</p>
+    <p>{{recipe.preparation}}</p>
   </accordion-group>
 </accordion>
+
