@@ -6,9 +6,10 @@ body
 {
 background:#E9E0E0;
 }
-a, a:hover, a:active, a:visited
+a, a:hover, a:active, a:visited, a:focus, i
 {
 text-decoration:none;
+color:#fff;
 }
 @font-face
 {
@@ -84,13 +85,7 @@ border-radius:20px;
 max-width:254px;
 margin:0 auto 5px;
 }
-.recipe-container .panel-heading
-{
-color:#fff;
-background-color:#665C5C;
-border-radius:5px;
-}
-.recipe-container .panel-body
+.accordion-body
 {
 color:#665C5C;
 background-color:#fff;
@@ -101,3 +96,17 @@ border-radius:5px;
 max-width:254px;
 margin:10px auto;
 }
+.accordion-heading{
+color: #fff;
+background-color: #8A7B7B;
+border-radius: 5px;
+}
+.accordion{
+padding-top:20px;
+}
+.ng-scope .search-input
+{
+margin: 0 auto;
+max-width: 240px;
+}
+
