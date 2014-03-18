@@ -1,11 +1,10 @@
 article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video, p, div, body, h1, h2, h3, h4, h5, h6, ul, li, a , button{
-font-family:contentFont;
-list-style:none;
+	font-family:contentFont;
+	list-style:none;
 }
 body
 {
-background-image: url('../assets/home-bg.png');
-background-color: #606B70;
+background:#E9E0E0;
 }
 a, a:hover, a:active, a:visited, a:focus, i
 {
@@ -17,109 +16,97 @@ color:#fff;
 font-family: contentFont;
 src: url('../fonts/AvenirLTStd-Book.otf'); /* IE9 */
 }
-h3{
-text-align:center;
-}
-.order-container
+.recipe-container
 {
-width:100%;
+max-width:357px;
 margin:0 auto;
-border-radius:5px;
+}
+.firstDiv
+{
 padding:0;
 }
-.top-header {
-min-height: 40px;
-padding-left: 20px;
-padding-right: 20px;
-background-color: #fafafa;
-background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
-background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
-background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
-background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
-background-repeat: repeat-x;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
-border: 1px solid #d4d4d4;
--webkit-border-radius: 4px;
--moz-border-radius: 4px;
-border-radius: 0px 0px 4px 4px;
--webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
--moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+.recipe-container ul
+{
+padding:0;
 }
-.lead {
-text-align:center;
-margin-top:100px;
-}
-.table-container  {
-padding:5px;
-}
-.table-container a:nth-child(even) {
-float:right;
-clear:left;
-}
-.table-container a:nth-child(odd) {
+.recipe-container .topHeader ul
+{
+max-width:239px;
 float:left;
-clear:right;
 }
-.numbers, a.numbers:hover {
-color: #3c3c3c;
-font-family: League Gothic,"league-gothic",sans-serif;
-font-size: 70px;
-text-transform: uppercase;
-margin: 10px;
-text-shadow: 0px -2px 3px #111, 0px 3px 4px #666;
-font-weight: normal;
-cursor: pointer;
-background-image: url('../assets/table.jpg');
-background-repeat: no-repeat;
-width: 175px;
-text-align: right;
-border-radius: 52px;
-padding-right: 23px;
--webkit-box-shadow: 0px 0px 10px 3px #B9AEB9;
--moz-box-shadow: 0px 0px 10px 3px #B9AEB9;
-box-shadow: 0px 0px 10px 3px #B9AEB9;
-border: 2px solid #474646;
+.recipe-container .topHeader
+{
+padding:0px 10px 0px 0px;
 }
-.orderMenu  a {
-  float:none;
-  width: 60%;
-  margin: 9px;
-}
-.orderMenu  {
-  margin-top:50px;
-}
-.orderTable {
-  color:#fff;
-  margin:20px;
-  border:1px solid #fff;
-  border-radius:5px;
-}
-.orderTable table {
-  margin-bottom:0;
-}
-.orderTable thead {
-  background:#fff;
-  color:#000;
-}
-.orderTable tbody {
-  background:blue;
-  color:#fff;
-}
-.orderTable .checkItem  {
-  padding:67px 7px;
-}
-.tablesAlign  {
-  text-align:center;
-  margin-top:20px;
-  color:#fff;
-}
-.homeBtn span {
+.recipe-container .topHeader li.active a
+{
 color:#fff;
 }
-.homeBtn  {
-  background:#EB9E3D;
+.recipe-container .topHeader li
+{
+padding: 19px 23px;
+font-size: 20px;
+border-radius: 10px 10px 0 0;
 }
-
+.recipe-container .topHeader li.active
+{
+background-color: rgb(202, 125, 54);
+}
+.pageheader
+{
+margin:0;
+}
+.pageheader h2
+{
+text-align:center;
+margin:0 auto;
+max-width:100px;
+margin-top:10px;
+}
+.pageheader 	.header-btn
+{
+margin:20px auto;
+font-size:17px;
+color:#fff;
+max-width:90px;
+margin-top:10px;
+}
+.pageheader 	.glyphicon
+{
+padding:2px 25px 0px 0px;
+}
+.glyphicon
+{
+padding:0px 25px 0px 0px;
+}
+.search-btn
+{
+border-radius:20px;
+max-width:254px;
+margin:0 auto 5px;
+}
+.accordion-body
+{
+color:#665C5C;
+background-color:#fff;
+border-radius:5px;
+}
+.recipe-container .modal-body input,.recipe-container .modal-body textarea
+{
+max-width:254px;
+margin:10px auto;
+}
+.accordion-heading{
+color: #fff;
+background-color: #8A7B7B;
+border-radius: 5px;
+}
+.accordion{
+padding-top:20px;
+}
+.ng-scope .search-input
+{
+margin: 0 auto;
+max-width: 240px;
+}
 
