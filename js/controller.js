@@ -5,15 +5,15 @@ cookApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/recipes', {
-	templateUrl: 'templates/list.html',
-	controller: 'RecipeListCtrl'
+  templateUrl: 'templates/list.html',
+  controller: 'RecipeListCtrl'
       }).
       when('/fav', {
-	templateUrl: 'templates/fav.html',
-	controller: 'FavRecipeCtrl'
+  templateUrl: 'templates/fav.html',
+  controller: 'FavRecipeCtrl'
       }).
       otherwise({
-	redirectTo: '/recipes'
+  redirectTo: '/recipes'
       });
 }]);
 
@@ -73,20 +73,20 @@ cookApp.controller('RecipeListCtrl', function ($scope, $modal, $log, RecipeServi
       $log.info('Modal dismissed at: ' + new Date());
     });
   };
-	$scope.addFav = function(recipe) {
-	  $scope.recipes = RecipeService.addFav(recipe);	  
-	};
+  $scope.addFav = function(recipe) {
+    $scope.recipes = RecipeService.addFav(recipe);	  
+  };
 });
 
 
 cookApp.controller('FavRecipeCtrl', function ($scope, RecipeStorageService, RecipeService) {
-	var favRecipes = RecipeService.recipes();
-	$scope.recipes = [];
-	angular.forEach(favRecipes, function(recipe) {
-		if (recipe.favitem == true) {
-		  $scope.recipes.push(recipe);
-		}
-	});	
+  var favRecipes = RecipeService.recipes();
+  $scope.recipes = [];
+  angular.forEach(favRecipes, function(recipe) {
+    if (recipe.favitem == true) {
+      $scope.recipes.push(recipe);
+    }
+  });
 });
 
 

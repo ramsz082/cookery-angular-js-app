@@ -6,11 +6,23 @@
   <accordion-group ng-repeat="recipe in recipes | filter:search | orderBy:'name' ">
     <accordion-heading xxclass="panel panel-default">
        {{recipe.name}} 
-	   <i class="pull-right" ng-class="{'icon-chevron-down': isopen, 'icon-chevron-right': !isopen}"></i>
+    <i class="pull-right" ng-class="{'icon-chevron-down': isopen, 'icon-chevron-right': !isopen}"></i>
     </accordion-heading>
-    <p>{{recipe.preparation}}</p>
-    <button class="btn btn-small" ng-click="edit(recipe)">Edit</button>
-	<a href="javascript:void(0)"><i id="favlist" ng-class="{'icon-heart': isopen, 'icon-heart': !isopen}" href="javascript:void(0)" ng-click="addFav(recipe)"></i></a>
+  
+  <h4>Ingredients:</h4>
+  <ol class="">
+    <li class="" ng-repeat="ingredient in recipe.ingredients">
+       {{ingredient.name}}
+    </li>                                   
+  </ol>
+  
+  <h4>Preparation:</h4>
+  <ol class="">
+    <li class="" ng-repeat="steps in recipe.preparation">
+       {{steps.step}}
+    </li>                                   
+  </ol>
+  <a href="javascript:void(0)" class="btn btn-info" ng-click="addFav(recipe)">Add to Favourites <i id="favlist" ng-class="{'icon-heart': isopen, 'icon-heart': !isopen}" href="javascript:void(0)"></i></a>
   </accordion-group>
 </accordion>
 

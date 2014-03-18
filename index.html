@@ -8,14 +8,11 @@
   <meta name="author" content="">
   <link rel="shortcut icon" href="assets/favicon.png">
   <title>Indian Cookery</title>
-
   <!-- Bootstrap core CSS -->
   <!-- hmm. Looks like angular UI only works with bootstrap 2.*. -->
   <!-- <link href="css/bootstrap.css" rel="stylesheet">  -->
   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-
   <link href="css/style.css" rel="stylesheet">	
-
   <script src="js/angular-1.2.1.js"></script>
   <script src="js/angular-route-1.2.1.js"></script>
   <!--<script src="js/ui-bootstrap-custom-0.6.0-SNAPSHOT.js"></script>-->
@@ -30,21 +27,17 @@
 
 <body>
   <div class="recipe-container">
-
     <div class="navbar" ng-controller=RecipeListCtrl>
       <div class="navbar-inner">
         <div class="container">
           <ul class="nav">
             <li class="active"><a href="#recipes" id="allRecipes">Recipes</a></li>
-            <li><a href="#fav" id="myFavRecipe">Fav</a></li>
+            <li><a href="#fav" id="myFavRecipe">Favourites</a></li>
           </ul>
-          <button ng-click="add()" class="btn btn-primary btn-sm header-btn pull-right" ><i class="icon-plus-sign icon-white xxglyphicon xxglyphicon-plus-sign"></i> New</button>
         </div>
       </div>
     </div>
-
     <div ng-view>All angular stuff goes in here...</div>
   </div>
-
 </body>
 </html>

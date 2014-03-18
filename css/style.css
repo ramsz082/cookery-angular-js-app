@@ -1,10 +1,10 @@
 article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video, p, div, body, h1, h2, h3, h4, h5, h6, ul, li, a , button{
-	font-family:contentFont;
-	list-style:none;
+  font-family:contentFont;
 }
 body
 {
-background:#E9E0E0;
+background:#3E8496;
+padding:0;
 }
 a, a:hover, a:active, a:visited, a:focus, i
 {
@@ -18,7 +18,6 @@ src: url('../fonts/AvenirLTStd-Book.otf'); /* IE9 */
 }
 .recipe-container
 {
-max-width:357px;
 margin:0 auto;
 }
 .firstDiv
@@ -88,7 +87,7 @@ margin:0 auto 5px;
 .accordion-body
 {
 color:#665C5C;
-background-color:#fff;
+background-color:#E4DADA;
 border-radius:5px;
 }
 .recipe-container .modal-body input,.recipe-container .modal-body textarea
@@ -98,7 +97,7 @@ margin:10px auto;
 }
 .accordion-heading{
 color: #fff;
-background-color: #8A7B7B;
+background-color: #A856AC;
 border-radius: 5px;
 }
 .accordion{
@@ -109,4 +108,6 @@ padding-top:20px;
 margin: 0 auto;
 max-width: 240px;
 }
-
+.accordion-group {
+border: 1px solid #D49DE6;
+}
