@@ -1,0 +1,20 @@
+ <?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+
+	xmlns:gap   = "http://phonegap.com/ns/1.0"
+	id          = "com.endeasy.indianrecipes"
+	version     = "1.0.0"
+	versionCode = "1" >
+	
+    <name>Indian Recipes</name>
+
+	<name>IndianRecipes.xml</name>
+
+	<description>
+	This is an app with list of Indian recipes. It includes almost all the important recipes with clear description.	
+	</description>
+	
+	<author href="http://www.endeasy.com" email="ramsz082@gmail.com">
+	Ramya Ramachandran
+	</author>
+</widget>
